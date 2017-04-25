@@ -34,6 +34,18 @@ Las herramientas que vamos a utilizar son:
 Imagen de Github: 
 ![imagen de Github](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
+**Codigo**
+
+Para utilizar codigo necesitamos las tildes al reves ``` tanto al inicio como al final del codigo que se va a utilizar 
+
+```
+String hola = "Hola mundo"
+```
+```
+>> sails new Aplication1
+>> cd Aplication1
+>>sails lift
+```
 
 a [Sails](http://sailsjs.org) application
 
