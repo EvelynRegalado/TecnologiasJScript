@@ -51,7 +51,7 @@ Este comando **elimina** los o el  contenedor que esten **detenido**.
 Para utilizar docker con mysql vamos a utilizar el siguiente comando:
 
 ```
->> docker run --name evelyn -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=evelyn -e MYSQL_USER=adrian -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
+>> docker run --name evelyn -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=evelyn -e MYSQL_USER=evelyn -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
 ```
 ### --name adrian
 
@@ -90,6 +90,14 @@ La clave del usuario **creado**
 
 - 3306 de la **derecha** es el puerto para acceder en la maquina **host**
 
-
+## Postgres
+```
+>> docker run --name
+postgresadian -e
+POSTGRES_PASSWORD=123456 -e
+POSTGRES_USER=adrian -e
+POSTGRES_DB=politecnica -p
+5432:5432 -d postgres
+```
 
 
