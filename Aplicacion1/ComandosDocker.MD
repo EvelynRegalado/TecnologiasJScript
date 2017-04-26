@@ -92,12 +92,11 @@ La clave del usuario **creado**
 
 ## Postgres
 ```
->> docker run --name
-postgresadian -e
-POSTGRES_PASSWORD=123456 -e
-POSTGRES_USER=adrian -e
-POSTGRES_DB=politecnica -p
-5432:5432 -d postgres
+>> docker run --name postgresevelyn -e POSTGRES_PASSWORD=123456 -e POSTGRES_USER=evelyn -e POSTGRES_DB=politecnica -p 5432:5432 -d postgres
 ```
+## MongoDB
 
+```
+>> docker run --name evelynmongo -p 27017:27017 -d mongo
+```
 
