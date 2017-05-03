@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e43fac6-3255-4935-b480-79ecf2d0c4cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02-javascript/Variables/variables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02-javascript/app.js" afterPath="$PROJECT_DIR$/02-javascript/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02-javascript/Funciones/funciones.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,13 +29,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="variables.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-javascript/Variables/variables.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="453">
-              <caret line="123" column="13" lean-forward="false" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+              <caret line="123" column="4" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="funciones.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02-javascript/Funciones/funciones.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+              <folding>
+                <element signature="n#!!doc;n#holaMundo#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,6 +70,8 @@
       <list>
         <option value="$PROJECT_DIR$/02-javascript/app.js" />
         <option value="$PROJECT_DIR$/02-javascript/Variables/variables.js" />
+        <option value="$PROJECT_DIR$/Funciones/funciones.js" />
+        <option value="$PROJECT_DIR$/02-javascript/Funciones/funciones.js" />
       </list>
     </option>
   </component>
@@ -129,7 +140,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="01-sails-docker" />
+              <option name="myItemId" value="02-javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Funciones" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -143,6 +158,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/02-javascript" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,6 +241,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5e43fac6-3255-4935-b480-79ecf2d0c4cf" name="Default" comment="" />
@@ -228,12 +251,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493835409232</updated>
-      <workItem from="1493835410399" duration="4286000" />
+      <workItem from="1493835410399" duration="6004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4286000" />
+    <option name="totallyTimeSpent" value="6004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="536" y="288" width="1400" height="1000" extended-state="0" />
@@ -281,9 +304,19 @@
     <entry file="file://$PROJECT_DIR$/02-javascript/Variables/variables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
-          <caret line="123" column="13" lean-forward="false" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+          <caret line="123" column="4" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-javascript/Funciones/funciones.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc;n#holaMundo#0" expanded="false" />
           </folding>
         </state>
       </provider>
