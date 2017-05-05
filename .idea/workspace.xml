@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comando.MD" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando.MD">
+      <file leaf-file-name="comando de sails.MD" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando de sails.MD">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="337">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,11 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComandosDocker.MD" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComandosDocker.MD" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/ComandosDocker.MD">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comandos npm.MD" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comandos npm.MD">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,6 +121,8 @@
         <option value="$PROJECT_DIR$/Funciones/funciones.js" />
         <option value="$PROJECT_DIR$/02-javascript/Funciones/funciones.js" />
         <option value="$PROJECT_DIR$/01-sails-docker/ComandosIniciales/ComandosDocker.MD" />
+        <option value="$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando.MD" />
+        <option value="$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando de sails.MD" />
       </list>
     </option>
   </component>
@@ -330,12 +342,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493835409232</updated>
       <workItem from="1493835410399" duration="6004000" />
-      <workItem from="1494012716042" duration="1423000" />
+      <workItem from="1494012716042" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7427000" />
+    <option name="totallyTimeSpent" value="7588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -430,14 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando.MD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-sails-docker/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -458,6 +462,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comandos npm.MD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-sails-docker/ComandosIniciales/comando de sails.MD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
