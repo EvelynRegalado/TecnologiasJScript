@@ -1,0 +1,20 @@
+//Objects Literals
+
+
+
+var nuevaFuncion = (nombre, apellido)=>{
+	var usuario1 = {
+    nombre:nombre,
+  apellido
+  };
+//alert(usuario1.nombre+usuario1.apellido);
+
+  
+	var usuario2 = {
+    nombre
+  };
+console.log(usuario2.nombre);
+}
+nuevaFuncion('Eve', 'Regalado')
+
+//let: Declarar una nueva variable en vez de var
