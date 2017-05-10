@@ -53,7 +53,10 @@ Para utilizar docker con mysql vamos a utilizar el siguiente comando:
 ```
 >> docker run --name evelyn -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=evelyn -e MYSQL_USER=evelyn -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
 ```
-### --name adrian
+
+##Descripción
+
+### --name evelyn
 
 El nombre del contenedor
 
@@ -63,8 +66,7 @@ El nombre del contenedor
 
 La clave del usuario **root**
 
-
-### -e MYSQL_DATABASE=
+### -e MYSQL_DATABASE=evelyn
 
 -e Le dice al docker que es una variable de entorno
 
@@ -90,13 +92,64 @@ La clave del usuario **creado**
 
 - 3306 de la **derecha** es el puerto para acceder en la maquina **host**
 
+
 ## Postgres
 ```
 >> docker run --name postgresevelyn -e POSTGRES_PASSWORD=123456 -e POSTGRES_USER=evelyn -e POSTGRES_DB=politecnica -p 5432:5432 -d postgres
 ```
+##Descripción
+
+### --name postgresevelyn
+
+Nombre del contenedor
+
+-e Le dice al docker que es una variable de entorno
+
+### -e POSTGRES_PASSWORD=
+
+Contraseña del usuario creado
+
+-e Le dice al docker que es una variable de entorno
+
+### -e POSTGRES_USER=evelyn=
+
+Nombre del usuario de la base de datos
+
+-e Le dice al docker que es una variable de entorno
+
+### -e POSTGRES_DB=politecnica
+
+-e Le dice al docker que es una variable de entorno
+....
+
+### -p 5432:5432
+
+-p Es para el port binding con el sistema operativo **host**
+
+Puerto que utilizará la base de datos postgres
+
+- 3306 de la **izquierda** es el puerto que se **usa** en el contenedor.
+
+- 3306 de la **derecha** es el puerto para acceder en la maquina **host**
+
+
 ## MongoDB
+
+##Descripción
 
 ```
 >> docker run --name evelynmongo -p 27017:27017 -d mongo
 ```
+### --name evelynmongo
+
+nombre de la base de datos
+
+### -p 27017:27017
+
+Puerto que utilizará la base de datos mongo
+
+- 3306 de la **izquierda** es el puerto que se **usa** en el contenedor.
+
+- 3306 de la **derecha** es el puerto para acceder en la maquina **host**
+
 
