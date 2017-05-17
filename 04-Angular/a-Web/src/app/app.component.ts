@@ -11,6 +11,9 @@ export class AppComponent {
     apellido: "Regalado"
   };
 
+  url:string="https://angular.io";
+  src:string="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg";
+
   constructor() {
     console.log("Constructor");
     this.holaMundo();
@@ -32,3 +35,4 @@ export class AppComponent {
   apellido: string,
   nombre: string
 }
+
