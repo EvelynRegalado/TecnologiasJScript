@@ -22,7 +22,19 @@ en el index.htm... puedes cambiar el mensaje de recargo
 //package.json: Tiene dependencias
  //angular cli: Config del angular cli
 //tscongig.json y tslint.json: Corresponde typescript
+//assets: puede guardar imagenes
 
+Un modulo tiene varios componentes
 
+Un componente 
+estructura de lo q contiene
+logica
+como se visualiza con el css
+
+Module: una aplicacion o pequeñas librerias que pueden unirse a mas modules 
+providers: clase que se va a compratir, ejemplo: 
+autenticacion - notas, clase, usuario //son servicios
+
+bootstrap: 
 
 

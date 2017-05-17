@@ -1,12 +1,34 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'twj-raiz',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bienvenido!';
-  nombre:string ="Eve";
-  apellido:string="Regalado";
+  usuario: UsuarioInt = {
+    nombre: "Evelyn",
+    apellido: "Regalado"
+  };
+
+  constructor() {
+    console.log("Constructor");
+    this.holaMundo();
+    this.saludar(this.usuario.nombre,
+      this.usuario.apellido
+    );
+  }
+
+  holaMundo() {
+    console.log("Hola mundo");
+  }
+
+  saludar(nombre: string,
+          apellido?: string): string {
+    return `Hola ${nombre} ${apellido}`;
+  }
+}
+    interface UsuarioInt {
+  apellido: string,
+  nombre: string
 }
