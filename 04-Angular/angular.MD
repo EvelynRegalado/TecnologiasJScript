@@ -18,6 +18,10 @@ en el index.htm... puedes cambiar el mensaje de recargo
 //Styles: estilos
 //main: //Levante el angular
 
+// .gitignore: Versionador
+//package.json: Tiene dependencias
+ //angular cli: Config del angular cli
+//tscongig.json y tslint.json: Corresponde typescript
 
 
 
