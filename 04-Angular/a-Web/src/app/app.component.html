@@ -12,5 +12,10 @@
 <!-- <p id = "bind" ></p>-->
 <p>{{parrafo}}</p>
 <h3>Mi segunda forma con []</h3>
-<p [innerText]="parrafo"></p>
+<!-- <p [innerText]="parrafo"></p> -->
+<p [style.color]="'green'"
+   [style.background-color]="background"
+   [innerText]="parrafo"></p>
 <input type = "text" [value]="parrafo">
+<app-estilos></app-estilos>
+<app-estilos></app-estilos>

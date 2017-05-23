@@ -28,7 +28,8 @@ export class AppComponent {
     }
     ,3000)
   }
-  parrafo = String ;
+  parrafo : String = "";
+  background: string ="pink";
 
   holaMundo() {
     console.log("Hola mundo");
