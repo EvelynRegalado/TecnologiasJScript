@@ -37,4 +37,7 @@ autenticacion - notas, clase, usuario //son servicios
 
 bootstrap: 
 
+Componente: 
+
+
 

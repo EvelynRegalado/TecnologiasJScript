@@ -12,15 +12,23 @@ export class AppComponent {
   };
 
   url:string="https://angular.io";
-  src:string="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg";
+  src:string="https://angular.io/resources/images/logos/angular/angular.png";
 
-  constructor() {
+  /**constructor() {
     console.log("Constructor");
     this.holaMundo();
     this.saludar(this.usuario.nombre,
       this.usuario.apellido
     );
+  }*/
+  constructor(){
+    setTimeout(()=>{
+      this.usuario.nombre ="EVEE "
+      this.parrafo="Es mi parrafo"
+    }
+    ,3000)
   }
+  parrafo = String ;
 
   holaMundo() {
     console.log("Hola mundo");
