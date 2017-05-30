@@ -306,11 +306,19 @@ Primera fila--
 </div>
 -->
   <br>
-<input type="text" [value]="nombre">
+  <!-- #nombreEtiqueta= guarda la variable
+<input placeholder=" Ingrese Texto" type="text" [value]="nombre" #nombreEtiqueta>
+Banana BoxModel[()]--
+  <input placeholder=" Ingrese Texto" type="text" [(ngModel)]="nombre">
   {{nombre}}
+  <img [src]="nombre" alt="nombre ">
   <br>
   <br>
+ <!--Vista al componente--
   <button class="btn btn-primary" (click)="cambiarNombre()">Cambiar Valor</button>
+
   <button (blur) ="CambiarOtroNombre()">Click</button>
+  <h1 (click)="CambiarNombreInput(nombreEtiqueta)">Cambio de nuevo</h1>-->
+
 </div>
 
