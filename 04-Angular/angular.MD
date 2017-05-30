@@ -39,5 +39,8 @@ bootstrap:
 
 Componente: 
 
+levantar en otro puerto: ng serve --port 4201
+() Para eventos
+
 
 
