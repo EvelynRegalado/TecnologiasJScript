@@ -9,7 +9,8 @@ export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
   arregloUsuarios = [{
     nombre: "Eveeee",
-    apellido: "Regalado"
+    apellido: "Regalado",
+    conectado: true
   },
     {
       nombre: "Brenda",
