@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-inicio',
@@ -8,6 +9,8 @@ import {Http} from "@angular/http";
 })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
+  planetas=[];
+
   arregloUsuarios = [{
     nombre: "Eveeee",
     apellido: "Regalado",
@@ -27,9 +30,9 @@ export class InicioComponent implements OnInit {
       nombre: "Stefania",
       apellido: "flores",
       conectado: true
-    }]
+    }];
 
-  constructor(private _http:Http) {
+  constructor(private _http: Http) {
   }
 
   ngOnInit() {
@@ -49,8 +52,28 @@ export class InicioComponent implements OnInit {
     console.log(nombreEtiqueta.placeholder);
     this.nombre = nombreEtiqueta.value;
   }
-  CargarPlanetas(){
-    this._http.get("swapi.co/api/planets")
-      //.subscribe()
+
+  CargarPlanetas() {
+    this._http.get("http://swapi.co/api/planets")
+     //.map(response=>response.json())
+      .subscribe(
+    (response) => {
+      console.log("Response:", response);
+      console.log(response.json());
+      let respuesta=response.json();
+      console.log(respuesta.next());
+      this.planetas = respuesta.results;
+      },
+      (error) => {
+      console.log("Error:", error)
+      },
+      () => {
+      console.log("Finally")
+      }
+    )
   }
+
+}
+interface PlanetaSW{
+name:string;
 }

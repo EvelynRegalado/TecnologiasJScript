@@ -339,7 +339,12 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
 
 <h2>Planetas de SW</h2>
   <br>
-  <button class="btn btn-outline-success" (click)="cargarPlanetas()"></button>
+  <button class="btn btn-outline-success" (click)="CargarPlanetas()">Planetas de Star Wars</button>
+  <div class="row">
+    <div *ngFor="let planetas of planetas">
+     <h1>{{planetas.name}}</h1>
+    </div>
+  </div>
   <!--let nueva variable
   of :de-->
   <!--
