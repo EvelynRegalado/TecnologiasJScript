@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/04-Angular/a-Web/src/assets/bootstrap/css/bootstrap.css">
 
 
-<div class="container">
+
   <!--
    <div align="center">
 
@@ -305,6 +305,7 @@
    </div>
  </div>
  -->
+<div class="container">
   <br>
   <!-- #nombreEtiqueta= guarda la variable
 <input placeholder=" Ingrese Texto" type="text" [value]="nombre" #nombreEtiqueta>
@@ -318,25 +319,43 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <button class="btn btn-primary" (click)="cambiarNombre()">Cambiar Valor</button>
 
   <button (blur) ="CambiarOtroNombre()">Click</button>
+  *ngFor=una directiva que recorre un arreglo
   <h1 (click)="CambiarNombreInput(nombreEtiqueta)">Cambio de nuevo</h1>-->
   <h2>Usuarios Conectados</h2>
-  <div class="row" >
-    <div class="col-sm-4" *ngFor="let usuario of arregloUsuarios">
-      <div class="card" style="width: 20rem;">
+  <div class="row">
+    <div  *ngFor="let usuario of arregloUsuarios" >
+      <div class="col-sm-4" *ngIf="usuario.conectado">
+      <div class="card" style="width: 20rem;" >
         <!--<img class="card-img-top" src="..." alt="Card image cap">-->
         <div class="card-block">
-          <h4 class="card-title">{{usuario.nombre}}</h4>
-          <p class="card-text">Nombre+Apellido</p>
+          <h4 class="card-title">{{usuario.nombre}}-{{usuario.conectado}}</h4>
+          <p class="card-text">{{usuario.nombre}}-{{usuario.apellido}}</p>
           <a href="#" class="btn btn-primary btn-block">GOOOOOOLLLLLLL rm!!!!!</a>
         </div>
       </div>
+      </div>
     </div>
   </div>
+
+<h2>Planetas de SW</h2>
+  <br>
+  <button class="btn btn-outline-success" (click)="cargarPlanetas()"></button>
   <!--let nueva variable
   of :de-->
+  <!--
+  Ejemplo de directiva *ngFor
   <div>
     <ul>
       <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
     </ul>
-  </div>
+  </div>-->
+  <!---Ejemplo de directiva *ngIf-->
+  <p *ngIf="true">true</p>
+  <p *ngIf="false">false</p>
+  <p *ngIf="(1+1)==2">Hola</p>
+  <p *ngIf="(1+1)!==2">Adios</p>
+  <p *ngIf="undefined">undefined</p>
+  <p *ngIf="null">undefined</p>
+  <p *ngIf="0">undefined</p>
+  <p *ngIf="nombre">Nombre</p>
 </div>

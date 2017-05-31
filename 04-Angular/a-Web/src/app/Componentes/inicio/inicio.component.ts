@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Http} from "@angular/http";
 
 @Component({
   selector: 'app-inicio',
@@ -14,14 +15,21 @@ export class InicioComponent implements OnInit {
   },
     {
       nombre: "Brenda",
-      apellido: "Ximena"
+      apellido: "Ximena",
+      conectado: true
     },
     {
       nombre: "Michel",
-      apellido: "Blabla"
+      apellido: "Blabla",
+      conectado: false
+    },
+    {
+      nombre: "Stefania",
+      apellido: "flores",
+      conectado: true
     }]
 
-  constructor() {
+  constructor(private _http:Http) {
   }
 
   ngOnInit() {
@@ -40,5 +48,9 @@ export class InicioComponent implements OnInit {
     console.log(nombreEtiqueta.type);
     console.log(nombreEtiqueta.placeholder);
     this.nombre = nombreEtiqueta.value;
+  }
+  CargarPlanetas(){
+    this._http.get("swapi.co/api/planets")
+      //.subscribe()
   }
 }
