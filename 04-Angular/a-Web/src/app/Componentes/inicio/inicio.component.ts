@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 
-@Component({
+@Component(
+  {
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
@@ -75,8 +76,8 @@ export class InicioComponent implements OnInit {
 
 }
 interface PlanetaSW{
-name:string;
 
+  name:string;
   rotation_period: string,
   orbital_period: string,
   diameter: string,
