@@ -321,30 +321,33 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <button (blur) ="CambiarOtroNombre()">Click</button>
   *ngFor=una directiva que recorre un arreglo
   <h1 (click)="CambiarNombreInput(nombreEtiqueta)">Cambio de nuevo</h1>-->
-  <h2>Usuarios Conectados</h2>
   <div class="row">
-    <div  *ngFor="let usuario of arregloUsuarios" >
+
+    <div *ngFor="let usuario of arregloUsuarios">
       <div class="col-sm-4" *ngIf="usuario.conectado">
-      <div class="card" style="width: 20rem;" >
-        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-        <div class="card-block">
-          <h4 class="card-title">{{usuario.nombre}}-{{usuario.conectado}}</h4>
-          <p class="card-text">{{usuario.nombre}}-{{usuario.apellido}}</p>
-          <a href="#" class="btn btn-primary btn-block">GOOOOOOLLLLLLL rm!!!!!</a>
+        <div class="card" style="width: 20rem;">
+          <div class="card-block">
+            <h4  class="card-title">{{usuario.nombre}} - {{usuario.conectado}}</h4>
+            <p class="card-text">{{usuario.nombre}} + {{usuario.apellido}}</p>
+            <a href="#" class="btn btn-primary btn-block">Ir a Perfil</a>
+          </div>
         </div>
       </div>
-      </div>
     </div>
+
   </div>
 
-<h2>Planetas de SW</h2>
+  <h2>Planetas de Star Wars</h2>
   <br>
-  <button class="btn btn-outline-success" (click)="CargarPlanetas()">Planetas de Star Wars</button>
-  <div class="row">
-    <div *ngFor="let planetas of planetas">
-     <h1>{{planetas.name}}</h1>
-    </div>
+
+  <button class="btn btn-outline-success" (click)="cargarPlanetas()">Cargar Planetas</button>
+
+  <div>
+    <ul *ngFor="let planeta of planetas">
+      <li>{{planeta.name}}</li>
+    </ul>
   </div>
+</div>
   <!--let nueva variable
   of :de-->
   <!--
@@ -354,7 +357,7 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
       <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
     </ul>
   </div>-->
-  <!---Ejemplo de directiva *ngIf-->
+  <!---Ejemplo de directiva *ngIf--
   <p *ngIf="true">true</p>
   <p *ngIf="false">false</p>
   <p *ngIf="(1+1)==2">Hola</p>
@@ -362,5 +365,5 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <p *ngIf="undefined">undefined</p>
   <p *ngIf="null">undefined</p>
   <p *ngIf="0">undefined</p>
-  <p *ngIf="nombre">Nombre</p>
-</div>
+  <p *ngIf="nombre">Nombre</p> -->
+
