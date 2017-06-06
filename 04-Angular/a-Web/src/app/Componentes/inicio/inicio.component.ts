@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
-  planetas: PlanetaSW[]=[];
+  planetas: PlanetaSW;
 
   arregloUsuarios = [{
     nombre: "Eveeee",
@@ -54,49 +54,41 @@ export class InicioComponent implements OnInit {
     this.nombre = nombreEtiqueta.value;
   }
 
-  CargarPlanetas() {
-    this._http.get("http://swapi.co/api/planets")
-     //.map(response=>response.json())
+  cargarPlanetas() {
+    this._http
+      .get('http://swapi.co/api/planets')
+      // .map(response => response.json())
       .subscribe(
-    (response) => {
-      console.log("Response:", response);
-      console.log(response.json());
-      let respuesta=response.json();
-      console.log(respuesta.next());
-      this.planetas = respuesta.results;
-      },
-      (error) => {
-      console.log("Error:", error)
-      },
-      () => {
-      console.log("Finally")
-      }
-    )
+        (reponse) => {
+          console.log('Response: ', reponse);
+          console.log(reponse.json());
+          let repuesta = reponse.json();
+          console.log(repuesta.next);
+          this.planetas = repuesta.results;
+        },
+        (error) => {
+          console.log('Error: ', error);
+        },
+        () => {
+          console.log('Finally');
+        }
+      );
   }
-
 }
 interface PlanetaSW{
-
-  name:string;
-  rotation_period: string,
-  orbital_period: string,
-  diameter: string,
-  climate: string,
-  gravity: string,
-  terrain: string,
-  surface_water: string,
-  population: string,
-  residents: [
-    string,
-    string,
-    string
-    ],
-    films: [
-    string,
-    string
-    ],
-  created: string,
-  edited: string,
-  url: string
+  name: string;
+  rotation_period: number;
+  orbital_period: number;
+  diameter: number;
+  climate: string;
+  gravity: string;
+  terrain: string;
+  surface_water: number;
+  population: number;
+  residents: string[];
+  films: string[];
+  created: string;
+  edited: string;
+  url: string;
 
 }
