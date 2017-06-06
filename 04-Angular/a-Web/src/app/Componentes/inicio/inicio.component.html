@@ -338,51 +338,117 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <div align="center">
     <h1>Tarea</h1>
     <h2>Planetas de Star Wars</h2>
-    <img src ="http://st-listas.20minutos.es/images/2013-03/358572/list_640px.jpg?1364765047" width="200" height="200"
-         alt="starWars">
+
     <br>
-  <br>
+    <br>
 
-  <button class="btn btn-outline-success" (click)="cargarPlanetas()">Cargar Planetas</button>
+    <button class="btn btn-outline-success" (click)="cargarPlanetas()"><img
+      src="http://wac.450f.edgecastcdn.net/80450F/wjbq.com/files/2014/11/Falcon.gif" width="200" height="200"
+      alt="starWars"><br><br>CARGAR PLANETAS
+    </button>
   </div>
   <br>
   <br>
-  <div class="row">
-    <div class="col-sm-6 " *ngFor="let planeta of planetas; let i = index">
-      <div class="card">
-        <!--  <img style="width: 400px" src="{{arregloImagenes[i]}}" class="figure-img img-fluid rounded" alt="{{planeta.name}}"-->
-        <div class="card-text">
-          <p><b>Nombre:</b> {{planeta.name}}</p>
-          <p><b>Periodo de rotacion:</b> {{planeta.rotation_period}}</p>
-          <p><b>Periodo orbital:</b> {{planeta.orbital_period}}</p>
-          <p><b>Diametro:</b> {{planeta.diameter}}</p>
-          <p><b>Clima:</b> {{planeta.diameter}}</p>
-          <p><b>Gravedad:</b> {{planeta.gravity}}</p>
-          <p><b>Terreno:</b> {{planeta.terrain}}</p>
-          <p><b>Superficie de agua:</b> {{planeta.surface_water}}</p>
-          <p><b>Poblacion:</b> {{planeta.population}}</p>
-        </div>
-        </div>
+  <div align="center">
+    <div  class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2"><img
+        src="https://vignette1.wikia.nocookie.net/es.starwars/images/4/4a/Alderaan.jpg/revision/latest?cb=20100723184830"
+        width="100" height="100"
+        alt="Alderaan"><br>Alderaannn
       </div>
+      <div class="col-md-2"><img
+        src="http://vignette4.wikia.nocookie.net/starwars/images/a/a0/Eaw_Yavin4.jpg/revision/latest?cb=20060418114439"
+        width="100" height="100"
+        alt="Yavin IV"><br>Yavin IV
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette4.wikia.nocookie.net/starwars/images/1/1d/Hoth_SWCT.png/revision/latest?cb=20160630022322"
+        width="100" height="100"
+        alt="Hoth"><br>Hoth
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette1.wikia.nocookie.net/es.starwars/images/1/1c/Dagobah.jpg/revision/latest?cb=20061117132132"
+        width="100" height="100"
+        alt="Dagobah"><br>Dagobah
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette3.wikia.nocookie.net/starwars/images/2/2c/Bespin_EotECR.png/revision/latest/scale-to-width-down/500?cb=20170222012550"
+        width="100" height="100"
+        alt="Bespin"><br>Bespin
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2"><img
+        src="https://vignette2.wikia.nocookie.net/starwars/images/9/96/Endor-DB.png/revision/latest?cb=20150920045330"
+        width="100" height="100"
+        alt="Endor"><br>Endor
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette4.wikia.nocookie.net/es.starwars/images/5/50/Naboo.jpg/revision/latest/scale-to-width-down/350?cb=20060318190228"
+        width="100" height="100"
+        alt="Naboo"><br>Naboo
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette3.wikia.nocookie.net/es.starwars/images/1/17/Coruscant-AoTCW.jpg/revision/latest?cb=20100213220520"
+        width="100" height="100"
+        alt="Coruscant"><br>Coruscant
+      </div>
+      <div class="col-md-2"><img
+        src="https://vignette4.wikia.nocookie.net/starwars/images/a/a9/Eaw_Kamino.jpg/revision/latest?cb=20090527045541"
+        width="100" height="100"
+        alt="Kamino"><br>Kamino
+      </div>
+      <div class="col-md-2"><img
+        src="http://vignette2.wikia.nocookie.net/es.starwars/images/6/6d/Geonosis_AotC.png/revision/latest?cb=20161025214407"
+        width="100" height="100"
+        alt="Geonosis"><br>Geonosis
+      </div>
+      <div class="col-md-1"></div>
+    </div>
   </div>
+    <div class="row">
+      <div class="col-sm-4 " *ngFor="let planeta of planetas; ">
+        <div class="card" style="width: 20rem;">
 
-</div>
-  <!--let nueva variable
-  of :de-->
-  <!--
-  Ejemplo de directiva *ngFor
-  <div>
-    <ul>
-      <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
-    </ul>
-  </div>-->
-  <!---Ejemplo de directiva *ngIf--
-  <p *ngIf="true">true</p>
-  <p *ngIf="false">false</p>
-  <p *ngIf="(1+1)==2">Hola</p>
-  <p *ngIf="(1+1)!==2">Adios</p>
-  <p *ngIf="undefined">undefined</p>
-  <p *ngIf="null">undefined</p>
-  <p *ngIf="0">undefined</p>
-  <p *ngIf="nombre">Nombre</p> -->
+          <div class="card-block">
+            <div class="card-text">
+
+              <li><b>Nombre:</b> {{planeta.name}}</li>
+              <li><b>Periodo de rotacion:</b> {{planeta.rotation_period}}</li>
+              <li><b>Periodo orbital:</b> {{planeta.orbital_period}}</li>
+              <li><b>Diametro:</b> {{planeta.diameter}}</li>
+              <li><b>Clima:</b> {{planeta.diameter}}</li>
+              <li><b>Gravedad:</b> {{planeta.gravity}}</li>
+              <li><b>Terreno:</b> {{planeta.terrain}}</li>
+              <li><b>Superficie de agua:</b> {{planeta.surface_water}}</li>
+              <li><b>Poblacion:</b> {{planeta.population}}</li>
+            </div>
+          </div>
+          <br>
+        </div>
+        <br>
+      </div>
+    </div>
+    <!--let nueva variable
+    of :de-->
+    <!--
+    Ejemplo de directiva *ngFor
+    <div>
+      <ul>
+        <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
+      </ul>
+    </div>-->
+    <!---Ejemplo de directiva *ngIf--
+    <p *ngIf="true">true</p>
+    <p *ngIf="false">false</p>
+    <p *ngIf="(1+1)==2">Hola</p>
+    <p *ngIf="(1+1)!==2">Adios</p>
+    <p *ngIf="undefined">undefined</p>
+    <p *ngIf="null">undefined</p>
+    <p *ngIf="0">undefined</p>
+    <p *ngIf="nombre">Nombre</p> -->
+  </div>
 
