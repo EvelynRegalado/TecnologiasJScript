@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
+import {PlanetaSWInterface} from "../Interface/StarWars";
 
 @Component(
   {
@@ -10,7 +11,7 @@ import 'rxjs/add/operator/map';
 })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
-  planetas: PlanetaSW[]=[];
+  planetas:any[]=[];
 
   arregloUsuarios = [{
     nombre: "Eveeee",
@@ -62,12 +63,13 @@ export class InicioComponent implements OnInit {
         (reponse) => {
           console.log('Response: ', reponse);
           console.log(reponse.json());
-          let repuesta = reponse.json();
+          let repuesta:any = reponse.json();
           console.log(repuesta.next);
-          this.planetas = repuesta.results;
+          this.planetas = reponse.json().results;
           this.planetas = this.planetas.map(
             (planeta)=>{
           planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name+'.jpg';
+          return planeta;
             }
           )
           //Arreglo
@@ -83,21 +85,4 @@ export class InicioComponent implements OnInit {
         }
       );
   }
-}
-interface PlanetaSW{
-  name: string;
-  rotation_period: number;
-  orbital_period: number;
-  diameter: number;
-  climate: string;
-  gravity: string;
-  terrain: string;
-  surface_water: number;
-  population: number;
-  residents: string[];
-  films: string[];
-  created: string;
-  edited: string;
-  url: string;
-  imagenURL?:string;
 }

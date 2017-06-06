@@ -310,7 +310,13 @@ Primera fila--
   <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
   </button>
   <div class="row">
-    <di
+    <div class="col-sm-4" *ngFor = "let planeta of planetas; let i=index">
+     {{planeta.name}}
+      <app-planeta-star-wars [planeta]="planeta">
+
+      </app-planeta-star-wars>
+
+    </div>
   </div>
 
   <!-- #nombreEtiqueta= guarda la variable
