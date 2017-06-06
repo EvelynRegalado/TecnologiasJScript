@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/04-Angular/a-Web/src/assets/bootstrap/css/bootstrap.css">
 
-
+<body class="fondoSW">
 <!--
  <div align="center">
 
@@ -306,6 +306,13 @@ Primera fila--
 -->
 <div class="container">
   <br>
+  <h1>Bienvenidos</h1>
+  <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
+  </button>
+  <div class="row">
+    <di
+  </div>
+
   <!-- #nombreEtiqueta= guarda la variable
 <input placeholder=" Ingrese Texto" type="text" [value]="nombre" #nombreEtiqueta>
 Banana BoxModel[()]=Directiva (prop, etiqueta)--
@@ -320,7 +327,7 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <button (blur) ="CambiarOtroNombre()">Click</button>
   *ngFor=una directiva que recorre un arreglo
   <h1 (click)="CambiarNombreInput(nombreEtiqueta)">Cambio de nuevo</h1>-->
-  <div class="row">
+  <!--<div class="row">
 
     <div *ngFor="let usuario of arregloUsuarios">
       <div class="col-sm-4" *ngIf="usuario.conectado">
@@ -334,7 +341,10 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
       </div>
     </div>
 
-  </div>
+  </div>-->
+
+  <!--
+  __
   <div align="center">
     <h1>Tarea</h1>
     <h2>Planetas de Star Wars</h2>
@@ -349,10 +359,11 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   </div>
   <br>
   <br>
+
   <div align="center">
-    <div  class="row">
+    <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-2"><img
+      <div class="col-md-2" ><img
         src="https://vignette1.wikia.nocookie.net/es.starwars/images/4/4a/Alderaan.jpg/revision/latest?cb=20100723184830"
         width="100" height="100"
         alt="Alderaan"><br>Alderaannn
@@ -409,46 +420,45 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
       <div class="col-md-1"></div>
     </div>
   </div>
-    <div class="row">
-      <div class="col-sm-4 " *ngFor="let planeta of planetas; ">
-        <div class="card" style="width: 20rem;">
-
-          <div class="card-block">
-            <div class="card-text">
-
-              <li><b>Nombre:</b> {{planeta.name}}</li>
-              <li><b>Periodo de rotacion:</b> {{planeta.rotation_period}}</li>
-              <li><b>Periodo orbital:</b> {{planeta.orbital_period}}</li>
-              <li><b>Diametro:</b> {{planeta.diameter}}</li>
-              <li><b>Clima:</b> {{planeta.diameter}}</li>
-              <li><b>Gravedad:</b> {{planeta.gravity}}</li>
-              <li><b>Terreno:</b> {{planeta.terrain}}</li>
-              <li><b>Superficie de agua:</b> {{planeta.surface_water}}</li>
-              <li><b>Poblacion:</b> {{planeta.population}}</li>
-            </div>
+  <div class="row">
+    <div class="col-sm-4 " *ngFor="let planeta of planetas; let i = index">
+      <div class="card" style="background-color:transparent" >
+        <div class="card-block">
+          <div class="card-text">
+            <li><b>Nombre:</b> {{i}} - {{planeta.name}} img [src]></li>
+            <li><b>Periodo de rotacion:</b> {{planeta.rotation_period}}</li>
+            <li><b>Periodo orbital:</b> {{planeta.orbital_period}}</li>
+            <li><b>Diametro:</b> {{planeta.diameter}}</li>
+            <li><b>Clima:</b> {{planeta.diameter}}</li>
+            <li><b>Gravedad:</b> {{planeta.gravity}}</li>
+            <li><b>Terreno:</b> {{planeta.terrain}}</li>
+            <li><b>Superficie de agua:</b> {{planeta.surface_water}}</li>
+            <li><b>Poblacion:</b> {{planeta.population}}</li>
           </div>
-          <br>
         </div>
         <br>
       </div>
+      <br>
     </div>
-    <!--let nueva variable
-    of :de-->
-    <!--
-    Ejemplo de directiva *ngFor
-    <div>
-      <ul>
-        <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
-      </ul>
-    </div>-->
-    <!---Ejemplo de directiva *ngIf--
-    <p *ngIf="true">true</p>
-    <p *ngIf="false">false</p>
-    <p *ngIf="(1+1)==2">Hola</p>
-    <p *ngIf="(1+1)!==2">Adios</p>
-    <p *ngIf="undefined">undefined</p>
-    <p *ngIf="null">undefined</p>
-    <p *ngIf="0">undefined</p>
-    <p *ngIf="nombre">Nombre</p> -->
   </div>
-
+  ____
+  let nueva variable
+  of :de-->
+  <!--
+  Ejemplo de directiva *ngFor
+  <div>
+    <ul>
+      <li *ngFor="let usuario of arregloUsuarios">{{usuario.nombre}}</li>
+    </ul>
+  </div>-->
+  <!---Ejemplo de directiva *ngIf--
+  <p *ngIf="true">true</p>
+  <p *ngIf="false">false</p>
+  <p *ngIf="(1+1)==2">Hola</p>
+  <p *ngIf="(1+1)!==2">Adios</p>
+  <p *ngIf="undefined">undefined</p>
+  <p *ngIf="null">undefined</p>
+  <p *ngIf="0">undefined</p>
+  <p *ngIf="nombre">Nombre</p> -->
+</div>
+</body>

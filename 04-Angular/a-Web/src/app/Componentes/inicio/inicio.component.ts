@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
-  planetas: PlanetaSW;
+  planetas: PlanetaSW[]=[];
 
   arregloUsuarios = [{
     nombre: "Eveeee",
@@ -65,12 +65,21 @@ export class InicioComponent implements OnInit {
           let repuesta = reponse.json();
           console.log(repuesta.next);
           this.planetas = repuesta.results;
+          this.planetas = this.planetas.map(
+            (planeta)=>{
+          planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name+'.jpg';
+            }
+          )
+          //Arreglo
+
+
         },
         (error) => {
           console.log('Error: ', error);
         },
         () => {
           console.log('Finally');
+
         }
       );
   }
@@ -90,5 +99,5 @@ interface PlanetaSW{
   created: string;
   edited: string;
   url: string;
-
+  imagenURL?:string;
 }

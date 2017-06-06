@@ -42,5 +42,9 @@ Componente:
 levantar en otro puerto: ng serve --port 4201
 () Para eventos
 
+Crear un nuevo componente: ng generate component planetaStarWars
+ng g 
 
+nombre : planetaStarWars
+etiqueta: planeta-star-wars
 

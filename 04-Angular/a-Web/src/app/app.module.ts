@@ -6,10 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { EstilosComponent } from './estilos/estilos.component';
 import {InicioComponent} from "./Componentes/inicio/inicio.component";
+import { PlanetaStarWarsComponent } from './Componentes/planeta-star-wars/planeta-star-wars.component';
 @NgModule({
   declarations: [
     AppComponent,
-    EstilosComponent, InicioComponent
+    EstilosComponent, InicioComponent, PlanetaStarWarsComponent
   ],
   imports: [
     BrowserModule,
