@@ -2,19 +2,20 @@ import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {PlanetaSWInterface} from "../Interface/StarWars";
+import {UsuarioClass} from "../../Clases/UsuarioClass";
 
 @Component(
   {
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
-})
+    selector: 'app-inicio',
+    templateUrl: './inicio.component.html',
+    styleUrls: ['./inicio.component.css']
+  })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
+  usuarios: UsuarioClass[] = [];
+  nuevoUsuario: UsuarioClass = new UsuarioClass("");
 
-  nuevoUsuario:UsuarioClass=new UsuarioClass();
-
-  planetas:any[]=[];
+  planetas: any[] = [];
 
   arregloUsuarios = [{
     nombre: "Eveeee",
@@ -41,6 +42,17 @@ export class InicioComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._http.get('http://localhost:1337/usuario')
+      .subscribe(
+        respuesta => {
+          let respJson:UsuarioClass[]= respuesta.json();
+          this.usuarios=respJson;
+          console.log('respuestaJson: ', respJson);
+        },
+        error => {
+          console.log("Error", error)
+        }
+      )
   }
 
   cambiarNombre(): void {
@@ -66,13 +78,13 @@ export class InicioComponent implements OnInit {
         (reponse) => {
           console.log('Response: ', reponse);
           console.log(reponse.json());
-          let repuesta:any = reponse.json();
+          let repuesta: any = reponse.json();
           console.log(repuesta.next);
           this.planetas = reponse.json().results;
           this.planetas = this.planetas.map(
-            (planeta)=>{
-          planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name+'.jpg';
-          return planeta;
+            (planeta) => {
+              planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name + '.jpg';
+              return planeta;
             }
           )
           //Arreglo
@@ -88,28 +100,26 @@ export class InicioComponent implements OnInit {
         }
       );
   }
+
   crearUsuario() {
     console.log("Creo usuario");
-    let usuario: UsuarioClass = {
-      nombre:this.nuevoUsuario.nombre
-  }
-    this._http.post(' http://localhost:4200/ ', usuario)
+    let usuario= {
+      nombre: this.nuevoUsuario.nombre
+    }
+    this._http.post('http://localhost:1337/Usuario', usuario)
       .subscribe(
-        respuesta=>{
-          let respuestaJson=respuesta.json();
+        respuesta => {
+          let respuestaJson = respuesta.json();
           console.log('respuestaJson: ', respuestaJson);
 
         },
-        error=>{
+        error => {
           console.log("Error", error)
         }
       )
   }
 }
-class UsuarioClass{
-  nombre:string;
-  constructor(nombre?:string){
-  this.nombre=nombre;
-  }
-}
+
+
+
 
