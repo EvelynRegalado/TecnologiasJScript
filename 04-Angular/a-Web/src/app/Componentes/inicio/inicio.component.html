@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="/04-Angular/a-Web/src/assets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
 
-<body class="fondoSW">
+
 <!--
  <div align="center">
 
@@ -305,13 +305,36 @@ Primera fila--
 </div>
 -->
 <div class="container">
+
   <br>
-  <h1>Bienvenidos</h1>
+
+  <div class="container">
+    <h1>BIENVENIDOS</h1>
+    <h2>Usuario</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <pre>
+            {{nuevoUsuario | json }}
+          </pre>
+          <label class="col-form-label">
+            Nombre Usuario
+          </label>
+          <input class="form-control"
+                 placeholder="Ingrese nuevo nombre"
+                 [(ngModel)]="nuevoUsuario.nombre" type="text">
+        </div>
+        <button class="btn btn-primary" (click)="crearUsuario()">Crear Usuario</button>
+      </div>
+    </div>
+  </div>
+  <!--
   <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
   </button>
   <div class="row">
-    <div class="col-sm-4" *ngFor = "let planeta of planetas; let i=index">
-     {{planeta.name}}
+    <div class="col-sm-4" *ngFor="let planeta of planetas; let i=index">
+      {{planeta.name}}
       <app-planeta-star-wars [planeta]="planeta">
 
       </app-planeta-star-wars>
@@ -467,4 +490,4 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <p *ngIf="0">undefined</p>
   <p *ngIf="nombre">Nombre</p> -->
 </div>
-</body>
+

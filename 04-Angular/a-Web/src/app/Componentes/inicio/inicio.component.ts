@@ -11,6 +11,9 @@ import {PlanetaSWInterface} from "../Interface/StarWars";
 })
 export class InicioComponent implements OnInit {
   nombre: string = "Evelyn";
+
+  nuevoUsuario:UsuarioClass=new UsuarioClass();
+
   planetas:any[]=[];
 
   arregloUsuarios = [{
@@ -85,4 +88,28 @@ export class InicioComponent implements OnInit {
         }
       );
   }
+  crearUsuario() {
+    console.log("Creo usuario");
+    let usuario: UsuarioClass = {
+      nombre:this.nuevoUsuario.nombre
+  }
+    this._http.post(' http://localhost:4200/ ', usuario)
+      .subscribe(
+        respuesta=>{
+          let respuestaJson=respuesta.json();
+          console.log('respuestaJson: ', respuestaJson);
+
+        },
+        error=>{
+          console.log("Error", error)
+        }
+      )
+  }
 }
+class UsuarioClass{
+  nombre:string;
+  constructor(nombre?:string){
+  this.nombre=nombre;
+  }
+}
+
