@@ -42,12 +42,14 @@ export class InicioComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._http.get('http://localhost:1337/usuario')
+    this._http.get('http://localhost:1337/usuario/')
       .subscribe(
         respuesta => {
           let respJson:UsuarioClass[]= respuesta.json();
+          console.log("respuesta json:", respJson);
           this.usuarios=respJson;
-          console.log('respuestaJson: ', respJson);
+          console.log("Usuarios: ", this.usuarios);
+
         },
         error => {
           console.log("Error", error)
@@ -103,10 +105,10 @@ export class InicioComponent implements OnInit {
 
   crearUsuario() {
     console.log("Creo usuario");
-    let usuario= {
+    /*let usuario= {
       nombre: this.nuevoUsuario.nombre
-    }
-    this._http.post('http://localhost:1337/Usuario', usuario)
+    }*/
+    this._http.post('http://localhost:1337/Usuario', this.nuevoUsuario)
       .subscribe(
         respuesta => {
           let respuestaJson = respuesta.json();
@@ -117,6 +119,27 @@ export class InicioComponent implements OnInit {
           console.log("Error", error)
         }
       )
+  }
+  eliminarUsuario(id){
+
+    this._http.delete("http://localhost:1337/usuario/"+id).subscribe(respuesta=>{
+      let rJson = respuesta.json();
+      console.log("respuesta json:", rJson);
+
+    }, error=>{
+      console.log("error: ", error);
+    });
+  }
+
+  actualizarUsuario(){
+    this._http.get("http://localhost:1337/usuario").subscribe(respuesta=>{
+      let rJson = respuesta.json();
+      console.log("respuesta json:", rJson);
+      this.usuarios=rJson;
+
+    }, error=>{
+      console.log("error: ", error);
+    });
   }
 }
 
