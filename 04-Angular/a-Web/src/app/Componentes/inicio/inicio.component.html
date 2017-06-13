@@ -315,7 +315,6 @@ Primera fila--
     <div class="col-sm-4" *ngFor="let planeta of planetas; let i=index">
       {{planeta.name}}
       <app-planeta-star-wars [planeta]="planeta">
-
       </app-planeta-star-wars>
 
     </div>
@@ -349,7 +348,7 @@ Primera fila--
       <div class="col-sm-3" *ngFor="let usuario of usuarios;let i = index;">
         <h3>{{usuario.nombre}}</h3>
         <p class="card-text">{{usuario.nombre}} </p>
-        <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id)"> Eliminar usuario</button>
+        <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id, i)"> Eliminar usuario</button>
       </div>
     </div>
   </div>

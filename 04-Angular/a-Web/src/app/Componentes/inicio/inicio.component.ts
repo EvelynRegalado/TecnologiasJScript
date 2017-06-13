@@ -121,17 +121,17 @@ export class InicioComponent implements OnInit {
         }
       )
   }
-  eliminarUsuario(id){
+  eliminarUsuario(id, i){
 
     this._http.delete("http://localhost:1337/usuario/"+id).subscribe(respuesta=>{
       let rJson = respuesta.json();
       console.log("respuesta json:", rJson);
+      this.usuarios.splice(i,1);
 
     }, error=>{
       console.log("error: ", error);
     });
   }
-
   actualizarUsuario(){
     this._http.get("http://localhost:1337/usuario").subscribe(respuesta=>{
       let rJson = respuesta.json();
