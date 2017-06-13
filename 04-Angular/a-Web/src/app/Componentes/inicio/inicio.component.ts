@@ -113,6 +113,7 @@ export class InicioComponent implements OnInit {
         respuesta => {
           let respuestaJson = respuesta.json();
           console.log('respuestaJson: ', respuestaJson);
+          this.usuarios.push(respuestaJson);
 
         },
         error => {

@@ -307,9 +307,22 @@ Primera fila--
 <div class="container">
 
   <br>
+  <h1>Deber N 1</h1>
+  <br>
+  <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
+  </button>
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let planeta of planetas; let i=index">
+      {{planeta.name}}
+      <app-planeta-star-wars [planeta]="planeta">
 
+      </app-planeta-star-wars>
+
+    </div>
+  </div>
   <div class="container">
-    <h1>BIENVENIDOS</h1>
+    <h1>Deber N 2</h1>
+    <h2>BIENVENIDOS CREAR USUARIO</h2>
     <h2>Usuarios</h2>
 
     <div class="row">
