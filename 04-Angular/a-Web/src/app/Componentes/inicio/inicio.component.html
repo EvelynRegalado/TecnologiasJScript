@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-
 
 <!--
  <div align="center">
@@ -331,14 +329,14 @@ Primera fila--
             {{nuevoUsuario | json }}
           </pre>
           <label class="col-form-label">
-            Nombre Usuario:
-          </label>
+          Nombre Usuario:
+        </label>
           <input class="form-control"
                  placeholder="Ingrese nuevo nombre"
                  [(ngModel)]="nuevoUsuario.nombre" type="text">
         </div>
         <button class="btn btn-primary" (click)="crearUsuario()">Crear Usuario</button>
-        <button class="btn btn-primary" (click)="actualizarUsuario()">Actualizar Lista de Usuarios</button>
+
       </div>
     </div>
     <br>
@@ -346,12 +344,29 @@ Primera fila--
 
     <div class="row">
       <div class="col-sm-3" *ngFor="let usuario of usuarios;let i = index;">
+        <div class="margin-usuarios">
+          <div class="animated rollIn" *ngIf="!usuario.editar">
         <h3>{{usuario.nombre}}</h3>
         <p class="card-text">{{usuario.nombre}} </p>
+            <button class="btn btn-warning"
+                    (click)="usuario.editar = !usuario.editar"> Editar Usuario</button>
+          </div>
+          <div class="animated bounceIn" *ngIf="usuario.editar">
+        <h4>Actualizar</h4>
+       <div class="form-group">
+         <label class="col-form-label">
+           Nombre Usuario:
+         </label>
+        <input class="form-control"
+               placeholder="Nombre"
+               type="text"
+                #usuarioNombre>
+       </div>
+        <button class="btn btn-primary" (click)="actualizarUsuario(usuarioNombre.value)">Actualizar</button>
         <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id, i)"> Eliminar usuario</button>
-      </div>
-    </div>
-  </div>
+        <button class="btn btn-secondary" (click)="usuario.editar=!usuario.editar">Cancelar Usuario</button>
+
+<div></div>
   <!--
   <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
   </button>
@@ -513,4 +528,7 @@ Banana BoxModel[()]=Directiva (prop, etiqueta)--
   <p *ngIf="0">undefined</p>
   <p *ngIf="nombre">Nombre</p> -->
 </div>
+  </div>
+</div>
 
+</div>

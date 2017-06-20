@@ -47,7 +47,14 @@ export class InicioComponent implements OnInit {
         respuesta => {
           let respJson:UsuarioClass[]= respuesta.json();
           console.log("respuesta json:", respJson);
-          this.usuarios=respJson;
+          this.usuarios=respJson.map(
+            (usuario:UsuarioClass)=> {
+              //cambiar el usuario
+              usuario.editar = false;
+              return usuario;
+            }
+          );
+
           console.log("Usuarios: ", this.usuarios);
 
         },
@@ -55,6 +62,7 @@ export class InicioComponent implements OnInit {
           console.log("Error", error)
         }
       )
+
   }
 
   cambiarNombre(): void {
@@ -131,16 +139,29 @@ export class InicioComponent implements OnInit {
     }, error=>{
       console.log("error: ", error);
     });
-  }
-  actualizarUsuario(){
-    this._http.get("http://localhost:1337/usuario").subscribe(respuesta=>{
-      let rJson = respuesta.json();
-      console.log("respuesta json:", rJson);
-      this.usuarios=rJson;
+  };
 
-    }, error=>{
-      console.log("error: ", error);
-    });
+  actualizarUsuario(usuario:UsuarioClass, nombre:string ){
+    let actualizacion={
+      nombre:nombre
+
+    };
+    this._http.put("http://localhost:1337/usuario/"+usuario.id, actualizacion)
+      .map(
+      (res)=>{
+        return res.json();
+      })
+      .subscribe(
+      res=>{
+        console.log("El usuario se actualizo", res);
+        let indice =this.usuarios.indexOf(usuario);
+        this.usuarios[indice].nombre=nombre;
+        this.usuarios[indice].editar = !this.usuarios[indice].editar;
+      },
+        err=> {
+          console.log("error: ", err);
+        }
+    );
   }
 }
 
